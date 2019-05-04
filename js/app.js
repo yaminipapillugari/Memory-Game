@@ -27,7 +27,7 @@ var displayCard = function() {
 //To display the cards
 for (var i = 0; i < allCards.length; i++) {
   allCards[i].addEventListener("click", displayCard);
-  };
+};
 // deck
 var deck = document.querySelector(".deck");
 // shuffle all cards using shuffle()
