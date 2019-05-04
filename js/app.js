@@ -40,11 +40,10 @@ shuffleCards.forEach(i => {
 
 // match condition
 var count = 0;
-
 function matchCards() {
-  movesCount();
   setTimeout(function() {
-    if (cardsOpen.length == 2) {
+    if (cardsOpen.length === 2) {
+      movesCount();
       if (cardsOpen[0].children[0].className == cardsOpen[1].children[0].className) {
         for (let i in cardsOpen) {
           cardsOpen[i].classList.add("match");
@@ -104,19 +103,14 @@ var aStars = [...allStars];
 var nos = 3;
 
 function starRating() {
-  if (moves == 18) {
+  if (moves == 25) {
     aStars[2].classList.add("fa-star-o");
     aStars[2].classList.remove("fa-star");
     nos--;
   }
-  if (moves == 32) {
+  if (moves == 45) {
     aStars[1].classList.add("fa-star-o");
     aStars[1].classList.remove("fa-star");
-    nos--;
-  }
-  if (moves == 45) {
-    aStars[0].classList.add("fa-star-o");
-    aStars[0].classList.remove("fa-star");
     nos--;
   }
 }
