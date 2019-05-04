@@ -1,4 +1,4 @@
-# Memory Game Project
+# Memory Game
 
 ## Table of Contents
 
@@ -18,8 +18,6 @@ For specific, detailed instructions, look at the project instructions in the [Ud
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
-
-# `Memory Game`
 
 ## Aim:
 
@@ -75,5 +73,3 @@ Restart Button - A restart button should reset the game board, timer and star ra
 ## Conclusion-
 
 From the Memory Game one can learn the HTML and CSS much better and also learn how to combine different functions.
-
-# Memory-Game
