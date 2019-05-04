@@ -17,7 +17,7 @@ var displayCard = function() {
     timeCount();
     timer = 1;
   }
-  if (!this.classList.contais('open') && cardsOpen < 2) {
+  if (!this.classList.contains("open") && cardsOpen.length < 2) {
     this.classList.add("open", "show", "disabled");
     cardsOpen.push(this);
     matchCards();
@@ -108,7 +108,6 @@ function starRating() {
     aStars[2].classList.add("fa-star-o");
     aStars[2].classList.remove("fa-star");
     nos--;
-    console.log(nos);
   }
   if (moves == 32) {
     aStars[1].classList.add("fa-star-o");
