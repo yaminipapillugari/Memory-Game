@@ -3,7 +3,7 @@
  */
 let cards = document.querySelectorAll(".card");
 var allCards = [...cards];
-var clickedCards = [];
+var cardsOpen = [];
 
 /*
  * Display the cards on the page
@@ -17,17 +17,20 @@ var displayCard = function() {
     timeCount();
     timer = 1;
   }
-  this.classList.add("open", "show", "disabled");
-  clickedCards.push(this);
-  matchCards();
+  if (!this.classList.contais('open') && cardsOpen < 2) {
+    this.classList.add("open", "show", "disabled");
+    cardsOpen.push(this);
+    matchCards();
+  }
 
 }
 //To display the cards
 for (var i = 0; i < allCards.length; i++) {
   allCards[i].addEventListener("click", displayCard);
   };
-
+// deck
 var deck = document.querySelector(".deck");
+// shuffle all cards using shuffle()
 var shuffleCards = shuffle(allCards);
 shuffleCards.forEach(i => {
   [].forEach.call(shuffleCards, function(item) {
@@ -41,21 +44,21 @@ var count = 0;
 function matchCards() {
   movesCount();
   setTimeout(function() {
-    if (clickedCards.length == 2) {
-      if (clickedCards[0].children[0].className == clickedCards[1].children[0].className) {
-        for (i in clickedCards) {
-          clickedCards[i].classList.add("match");
-          clickedCards[i].classList.remove("open", "show");
+    if (cardsOpen.length == 2) {
+      if (cardsOpen[0].children[0].className == cardsOpen[1].children[0].className) {
+        for (let i in cardsOpen) {
+          cardsOpen[i].classList.add("match");
+          cardsOpen[i].classList.remove("open", "show");
         }
         gameOver();
       } else {
-        for (i in clickedCards) {
-          clickedCards[i].classList.remove("open", "show", "disabled");
+        for (let i in cardsOpen) {
+          cardsOpen[i].classList.remove("open", "show", "disabled");
         }
       }
-      clickedCards = [];
+      cardsOpen = [];
     }
-  }, 199);
+  }, 300);
 }
 
 //moves count

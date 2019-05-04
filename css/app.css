@@ -110,3 +110,27 @@ h1 {
   float: right;
   cursor: pointer;
 }
+
+/* Media queries for mobile view */
+@media only screen and (max-width:480px) {
+  .deck {
+    width: 80%;
+    align-items: center;
+
+  }
+  .deck .card {
+    width: 100%;
+    }
+}
+
+/* Media queries for tablet view */
+@media only screen and (min-width:481px) and (max-width:780px) {
+  .deck {
+    width: 80%;
+    align-items: center;
+
+  }
+  .deck .card {
+    width: 100%;
+    }
+}
