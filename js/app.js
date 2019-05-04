@@ -103,12 +103,12 @@ var aStars = [...allStars];
 var nos = 3;
 
 function starRating() {
-  if (moves == 25) {
+  if (moves == 20) {
     aStars[2].classList.add("fa-star-o");
     aStars[2].classList.remove("fa-star");
     nos--;
   }
-  if (moves == 45) {
+  if (moves == 35) {
     aStars[1].classList.add("fa-star-o");
     aStars[1].classList.remove("fa-star");
     nos--;
